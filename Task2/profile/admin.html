@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin Dashboard</title>
+</head>
+<body>
+    <h2>Admin Dashboard</h2>
+
+    {% for item in data %}
+        <hr>
+        <p><strong>Rating:</strong> {{ item.rating }}</p>
+        <p><strong>Review:</strong> {{ item.review }}</p>
+        <p><strong>AI Summary:</strong> {{ item.summary }}</p>
+        <p><strong>Recommended Action:</strong> {{ item.action }}</p>
+        <p><em>{{ item.time }}</em></p>
+    {% endfor %}
+</body>
+</html>

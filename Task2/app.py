@@ -51,13 +51,13 @@ def submit_review(
     review: str = Form(...)
 ):
     ai_response = gemini_call(
-        f"write a customer friendly response to this review:\n{review}",
-        "Thanks for your feedback! kinda message nothing too long"
+        f"write a friendly response to this customer review:\n{review}",
+        "Thanks for your feedback! We hope to serve you again"
     )
 
     summary = gemini_call(
         f"summarize this review in one short sentence:\n{review}",
-        "ex : customer shared positive feedback about their experience."
+        "example:customer shared positive feedback about their experience."
     )
 
     action = gemini_call(

@@ -57,6 +57,7 @@ def submit_review(
 
     summary = gemini_call(
         f"summarize this review in one short sentence:\n{review}",
+        "example:customer shared feedback about their experience."
     )
 
     action = gemini_call(
